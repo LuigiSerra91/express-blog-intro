@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+app.use(express.static('public'))
 const host = 'http://127.0.0.1'
 const port = 3000
 
@@ -12,8 +13,5 @@ app.listen(port, () => {
 
 app.get('/', (req, res) =>{
 
-    const markup = `
-    <h1>Benvenuto nel mio blog</h1>
-    `
-    res.send(markup)
+    res.send('<h1>Benvenuto nel mio blog</h1>')
 })
