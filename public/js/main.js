@@ -1,21 +1,25 @@
 
-console.log('wee');
+
+const listPost = require('')
+const containerEl = document.querySelector('.container')
 
 
 
-http://127.0.0.1:3000/blog
 
-axios.get("http://127.0.0.1:3000/blog")
-    .then(response => {
-      let listAxios = response.data;
-      console.log(listAxios);
-      
-      
-      
-      
-      
-      
-     
-      
-    
-    }).catch(err => console.log(err));
+listPost.forEach(element => {
+    console.log(element);
+    const {titolo,contenuto,immagine,tags} = element
+
+    const markup = `
+  
+    <ul>
+        <li>${titolo}</li>
+        <li>${contenuto}</li>
+        <li><img src="${immagine}" alt=""></li>
+        <li>${tags}</li>
+    </ul>
+
+    `
+containerEl.innerHTML += markup
+
+})

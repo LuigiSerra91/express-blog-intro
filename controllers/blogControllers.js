@@ -1,4 +1,4 @@
-const postList = require('../data/postList')
+const postList = require('../data/postList.js')
 
 
 function index(req,res){
