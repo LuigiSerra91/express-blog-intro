@@ -1,26 +1,27 @@
-
-
+console.log('its works');
 
 const containerEl = document.querySelector('.container')
 
-let listEl= document.querySelector('ul')
 
-axios.get("http://127.0.0.1:3000/blog")
-.then(res=>{
-    const posts = res.data
-    
-    
-    listElement= ''
-    posts.forEach(post => {
-        let {titolo,contenuto, immagine, tags} = post
-        const markup=`
-            <li class="pb-2 text-center"><h2>${titolo}</h2></li>
-            <li class="pb-2 text-center">${contenuto}</li>
-            <li class="pb-2 text-center"><img src="${immagine}" alt=""></li>
-            <li class="pb-2 text-center">${tags}</li>
-            
-            `
-        listElement+=markup
+axios.get("http://127.0.0.1:3000/posts")
+    .then(response => {
+      let listAxios = response.data;
+        // console.log(listAxios);
+
+    listAxios.data.forEach(element => {
+        console.log(element);
+        const {titolo, contenuto, immagine, tags} = element
+        
+        const markup = `
+         <ul>
+             <li>${titolo}</li>
+             <li>${contenuto}</li>
+             <img src="./${immagine}" alt="img-blog">
+             <li>${tags}</li>
+         </ul>
+        `
+
+        containerEl.innerHTML += markup
     });
-    listEl.innerHTML= listElement
-})
+
+    })

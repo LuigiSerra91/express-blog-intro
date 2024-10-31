@@ -1,11 +1,11 @@
-const postList = require('../data/postList.js')
+const posts = require('../data/postList.js')
 
 
 function index(req,res){
 
     res.json({
-        data: postList,
-        count: postList.length
+        data:posts,
+        count: posts.length
       })
 }
 

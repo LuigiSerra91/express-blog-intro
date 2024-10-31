@@ -1,4 +1,6 @@
-const listPostEl = [
+
+
+const posts = [
     {
         "titolo": "La bellezza dei tramonti",
         "contenuto": "I tramonti offrono uno spettacolo naturale che ci lascia senza parole. Ogni sera, il cielo si tinge di colori incredibili.",
@@ -33,10 +35,19 @@ const listPostEl = [
 
 
 
+module.exports = posts
+
+
+    
+    
+
+
+    
+
         
   
     
         
     
 
-module.exports = listPostEl;
+;
