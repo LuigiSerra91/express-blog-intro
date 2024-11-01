@@ -28,4 +28,4 @@ axios.get("http://127.0.0.1:3000/posts")
         containerEl.innerHTML += markup
     });
 
-    })
+    }).catch(err => console.log(err));
