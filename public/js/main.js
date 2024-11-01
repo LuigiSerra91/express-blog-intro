@@ -13,6 +13,7 @@ axios.get("http://127.0.0.1:3000/posts")
         const {titolo, contenuto, immagine, tags} = element
         
         const markup = `
+
         <div id="card-big" class="col-sm-12 col-md-6 col-lg-4 g-3 ">
          <div class="card rounded-0 mb-5 mt-5">
           <ul>
