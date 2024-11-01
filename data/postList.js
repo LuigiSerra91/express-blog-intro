@@ -5,7 +5,7 @@ const posts = [
         "titolo": "La bellezza dei tramonti",
         "contenuto": "I tramonti offrono uno spettacolo naturale che ci lascia senza parole. Ogni sera, il cielo si tinge di colori incredibili.",
         "immagine": "/img/tramonto.jpeg",
-        "tags": ["natura", "fotografia", "tramonto"]
+        "tags": ["natura", "fotografia", "tramonto"],
     },
     {
         "titolo": "Ricetta della Pasta alla Carbonara",
