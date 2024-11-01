@@ -6,29 +6,23 @@ const cors = require('cors')
 const host = 'http://127.0.0.1'
 const port = 3000
 
+app.listen(port,() => {
+  console.log(`example app listening on ${host}:${port}`);
+  
+})
 
-app.get('/index.html', (req, res) => {
+
+app.use(cors())
+
+  
+
+
+
+app.get('/', (req, res) => {
 
   res.send('<h1>Benvenuto nel mio blog </h1>')
 })
 
-app.use(cors())
-app.get('/ciao', (req, res) => {
-    
-    
-    res.send('<img src="/img/carbonara.jpeg" alt="pizza vegana">')
-  })
-  
-
 app.get('/posts', blogControllers.index) 
 
 
-
-
-
-
-
-app.listen(port, () => {
-  console.log(`example app listening on ${host}:${port}`);
-  
-})
